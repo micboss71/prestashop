@@ -18,7 +18,7 @@ class ingpsppaypal extends PaymentModule
     {
         $this->name = 'ingpsppaypal';
         $this->tab = 'payments_gateways';
-        $this->version = '1.4.4';
+        $this->version = '1.4.5';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
