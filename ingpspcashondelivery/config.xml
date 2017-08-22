@@ -2,7 +2,7 @@
 <module>
 	<name>ingpspcashondelivery</name>
 	<displayName><![CDATA[ ING PSP Cash On Delivery]]></displayName>
-	<version><![CDATA[1.4.5]]></version>
+	<version><![CDATA[1.5.0]]></version>
 	<description><![CDATA[Accept payments for your products using ING PSP Cash On Delivery]]></description>
 	<author><![CDATA[Ginger Payments]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>

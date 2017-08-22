@@ -18,7 +18,7 @@ class ingpspKlarna extends PaymentModule
     {
         $this->name = 'ingpspklarna';
         $this->tab = 'payments_gateways';
-        $this->version = '1.4.5';
+        $this->version = '1.5.0';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
@@ -59,6 +59,7 @@ class ingpspKlarna extends PaymentModule
             || !$this->registerHook('payment')
             || !$this->registerHook('displayPaymentEU')
             || !$this->registerHook('paymentReturn')
+            || !$this->registerHook('updateOrderStatus')
             || !Configuration::get('ING_PSP_APIKEY')
         ) {
             return false;
@@ -101,6 +102,28 @@ class ingpspKlarna extends PaymentModule
         $this->_html .= $this->displayConfirmation($this->l('Settings updated'));
     }
 
+    
+    public function hookUpdateOrderStatus($params) 
+    { 
+        $ingpsp = $this->getOrderDetails($params['cart']->id);
+        if (isset($ingpsp['payment_method'])
+                 && $ingpsp['payment_method'] == $this->name
+                     && isset($params['newOrderStatus'])
+                         && isset($params['newOrderStatus']->id)
+                             && intval($params['newOrderStatus']->id) === intval(Configuration::get('PS_OS_SHIPPING'))
+            ) {  
+                try {
+                     $this->ginger->setOrderCapturedStatus(
+                             $this->ginger->getOrder($ingpsp['ginger_order_id'])
+                             );
+                     return true;
+                } catch (\Exception $ex) {
+                    return false;
+                }
+        }
+        return true;
+    }
+    
     public function hookPayment($params)
     {
         if (!$this->active) {
@@ -500,5 +523,23 @@ class ingpspKlarna extends PaymentModule
      */
     public function getPluginVersion() {
         return sprintf('Prestashop v%s', $this->version);
+    }
+    
+    
+    /**
+     * fetch ingpsp order by cart id
+     * 
+     * @param int $cartID
+     * @return array
+     */
+    private function getOrderDetails($cartID) {
+        return Db::getInstance()->getRow(
+                sprintf(
+                    'SELECT * FROM `%s` WHERE `%s` = \'%s\'',
+                    _DB_PREFIX_.'ingpsp',
+                    'id_cart',
+                     $cartID
+                )
+            );
     }
 }

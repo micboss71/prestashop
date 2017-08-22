@@ -8,6 +8,7 @@ use GingerPayments\Payment\Common\ArrayFunctions;
 use GingerPayments\Payment\Ideal\Issuers;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Exception\RequestException;
+use GingerPayments\Payment\Order\Transaction;
 
 final class Client
 {
@@ -670,4 +671,35 @@ final class Client
             );
         }
     }
+    
+    /**
+     * update the order status to captured
+     * 
+     * @param  Order $order
+     * @throws OrderNotFoundException
+     * @throws ClientException
+     * @return Transaction
+     */
+    public function setOrderCapturedStatus(Order $order) 
+    {  
+        try {
+            return Transaction::fromArray($this->httpClient->post(
+                    "orders/".$order->id()."/transactions/".$order->transactions()->current()->id()->toString()."/captures/",
+                    [
+                        "timeout" => 30
+                    ]
+                )->json()
+            );
+        } catch (RequestException $exception) {
+            if ($exception->getCode() == 404) {
+                throw new OrderNotFoundException('No order with that ID was found.', 404, $exception);
+            }
+            throw new ClientException(
+                'An error occurred while updating the order: '.$exception->getMessage(),
+                $exception->getCode(),
+                $exception
+            );
+        }
+    }
+    
 }

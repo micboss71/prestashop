@@ -12,7 +12,7 @@ use GingerPayments\Payment\Order\Transaction\PaymentMethod;
 use GingerPayments\Payment\Order\Transactions;
 use GingerPayments\Payment\Order\Customer;
 use GingerPayments\Payment\Order\Extra;
-use Rhumsaa\Uuid\Uuid;
+use Ramsey\Uuid\Uuid;
 use GingerPayments\Payment\Order\OrderLines;
 
 final class Order

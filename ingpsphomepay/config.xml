@@ -2,7 +2,7 @@
 <module>
 	<name>ingpsphomepay</name>
 	<displayName><![CDATA[ING PHP Home&#039;Pay]]></displayName>
-	<version><![CDATA[1.4.5]]></version>
+	<version><![CDATA[1.5.0]]></version>
 	<description><![CDATA[Accept payments for your products using Home&#039;Pay banking.]]></description>
 	<author><![CDATA[Ginger Payments]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>
