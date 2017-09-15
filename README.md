@@ -1,4 +1,4 @@
-# ING PSP plugin for Prestashop, v1.4.5
+# ING PSP plugin for Prestashop, v1.6.0
 
 ## About
 You can use this plugin to accept payments in your webshop with Kassa Compleet, ING ePay and ING Checkout

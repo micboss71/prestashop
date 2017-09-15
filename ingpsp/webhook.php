@@ -10,6 +10,7 @@ $payment_method_mapping = array(
     "klarna" => "Klarna",
     "homepay" => "Homepay",
     "paypal" => "PayPal",
+    "payconiq" => "Payconiq"
 );
 
 $input = json_decode(file_get_contents("php://input"), true);
