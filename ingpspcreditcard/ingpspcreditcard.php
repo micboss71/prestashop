@@ -18,7 +18,7 @@ class ingpspCreditcard extends PaymentModule
     {
         $this->name = 'ingpspcreditcard';
         $this->tab = 'payments_gateways';
-        $this->version = '1.5.0';
+        $this->version = '1.6.1';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
