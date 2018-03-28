@@ -29,17 +29,15 @@ class ingpspValidationModuleFrontController extends ModuleFrontController
                 break;
             case 'processing':
                 if (isset($cart_id)) {
-                    $this->setTemplate('processing.tpl');
-                    $this->context->smarty->assign('fallback_url',
-                        $this->context->link->getModuleLink('ingpsp', 'pending')
-                    );
+                    Tools::redirect($this->getProcessingUrl());
                 }
                 break;
             case 'new':
             case 'cancelled':
             case 'expired':
             case 'error':
-                $this->context->smarty->assign('checkout_url',
+                $this->context->smarty->assign(
+                    'checkout_url',
                     $this->context->link->getPagelink('order').'?step=3'
                 );
                 $this->setTemplate('errors-messages.tpl');
@@ -49,6 +47,27 @@ class ingpspValidationModuleFrontController extends ModuleFrontController
         }
     }
 
+    /**
+     * @return string
+     */
+    public function getProcessingUrl()
+    {
+        if (version_compare(_PS_VERSION_, '1.5') <= 0) {
+            return (Configuration::get('PS_SSL_ENABLED') ? 'https://' : 'http://')
+                .htmlspecialchars($_SERVER['HTTP_HOST'], ENT_COMPAT, 'UTF-8')
+                .__PS_BASE_URI__.'index.php?fc=module&module=ingpsp&controller=processing&order_id='.Tools::getValue('order_id').'&id_cart='.Tools::getValue('id_cart');
+        } else {
+            return $this->context->link->getModuleLink(
+                'ingpsp',
+                'processing',
+                [
+                    'order_id' => Tools::getValue('order_id'),
+                    'id_cart'  => Tools::getValue('id_cart')
+                ]
+            );
+        }
+    }
+    
     /**
      * @param string $orderId
      * @return null|string
@@ -64,27 +83,5 @@ class ingpspValidationModuleFrontController extends ModuleFrontController
         }
 
         return $ginger->getOrder($orderId)->getStatus();
-    }
-
-    /**
-     * Method prepares Ajax response for processing page
-     */
-    public function checkStatusAjax()
-    {
-        $orderStatus = $this->checkOrderStatus(Tools::getValue('order_id'));
-
-        if ($orderStatus == 'processing') {
-            $response = [
-                'status' => $orderStatus,
-                'redirect' => false
-            ];
-        } else {
-            $response = [
-                'status' => $orderStatus,
-                'redirect' => true
-            ];
-        }
-
-        die(json_encode($response));
     }
 }

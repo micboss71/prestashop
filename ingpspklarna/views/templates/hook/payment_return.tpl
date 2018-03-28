@@ -1,4 +1,9 @@
-<h1>{l s='Klarna Payment Success' mod='ingpspklarna'}</h1>
+<h1>
+    {l s='Your order at %s' sprintf=$shop_name mod='ingpspklarna'}
+</h1>
+<h3>
+    {l s='Klarna Payment Success' mod='ingpspklarna'}
+</h3>
 <p>
     {l s='Your order is complete.' mod='ingpspklarna'}
     <br/><br/>

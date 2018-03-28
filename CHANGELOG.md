@@ -1,6 +1,20 @@
 # Changelog Prestashop 1.6
 
+** 1.7.0 **
+
+* Added AfterPay Payment Method
+
+* Aligned description field display & json
+
+* Fix for the cart double validation issue
+
+* Added new Sofort & Klarna Logos
+
+* Other minor bug fixes
+
+
 ** 1.6.1**
+
 
 * Updated ing-php library to version 1.4.0 
 

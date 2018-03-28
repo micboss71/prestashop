@@ -10,11 +10,13 @@ $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_572b221ec6530322501
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_7853e11acea9a6109b2f1c00cdb4041e'] = 'Your order at';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_0d8a5a85d378a2c248326eac1b045556'] = 'Use the following reference when paying for your order:';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_d438503a23d967ac1bfbeee3e174bca0'] = 'Bank Transfer Reference :';
+$_MODULE['<{ingpspbanktransfer}prestashop>error_68a489dbc8079a40832c3d558fcfb069'] = ' Your order at %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_5023dbc72719b0d03162a18fda6db2b3'] = 'There was an error processing your order. We apologize for the inconvenience.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_7dc1ee1a41f69f4027a773780c058b07'] = 'Please click here to choose another payment method.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_34e0a062726d06e24047764c3bef28c0'] = 'Please click here to try again.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_b260f74ed85604be0f0381ce059f6b44'] = 'Go back to the checkout page.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_0afd6d0687be21f6cd46d159aa130db4'] = 'Pay by Bank Transfer';
+$_MODULE['<{ingpspbanktransfer}prestashop>payment_return_68a489dbc8079a40832c3d558fcfb069'] = ' Your order at %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_39e50761df1515cf368f1242a61a81bd'] = 'The status of your order at %s could not be determined.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_60cc46d58b23f7b478ffcc73ed70ae57'] = 'Your order at %s is pending.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_0aa295158c331b68aaa44f535abf0718'] = 'To complete your order, transfer the amount using the information below';

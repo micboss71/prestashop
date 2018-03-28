@@ -1,3 +1,6 @@
+<h3>
+    {l s='Your order at %s' sprintf=$shop_name mod='ingpsppaypal'}
+</h3>
 <p>
-	{l s='Thank you for your order' mod='ingpsppaypal'}
+    {l s='Thank you for your order' mod='ingpsppaypal'}
 </p>

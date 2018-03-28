@@ -18,7 +18,7 @@ class ingpspBanktransfer extends PaymentModule
     {
         $this->name = 'ingpspbanktransfer';
         $this->tab = 'payments_gateways';
-        $this->version = '1.6.1';
+        $this->version = '1.7.0';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
@@ -169,7 +169,6 @@ class ingpspBanktransfer extends PaymentModule
                 $presta_address->company,
                 $presta_address->address1,
                 $presta_address->address2,
-                $presta_address->firstname." ".$presta_address->lastname,
                 $presta_address->postcode." ".$presta_address->city,
             ))),
             'address_type' => 'customer',
@@ -325,7 +324,8 @@ class ingpspBanktransfer extends PaymentModule
     /**
      * @return string
      */
-    public function getPluginVersion() {
+    public function getPluginVersion()
+    {
         return sprintf('Prestashop v%s', $this->version);
     }
 }

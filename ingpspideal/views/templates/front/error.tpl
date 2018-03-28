@@ -1,6 +1,8 @@
 {include file="$tpl_dir/errors.tpl"}
 
-<h1>{l s='There was an error processing your order' mod='ingpspideal'}</h1>
+<h1>{l s='Your order at %s' sprintf=$shop_name mod='ingpspideal'}</h1>
+
+<h3>{l s='There was an error processing your order' mod='ingpspideal'}</h3>
 
 <div class="error">
     <p><strong>{$error_message}</strong></p>

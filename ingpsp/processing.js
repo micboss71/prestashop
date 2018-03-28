@@ -10,7 +10,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (data) {
                     if (data.redirect == true) {
-                        location.reload();
+                        location.href = validation_url;
                     }
                 }
             });

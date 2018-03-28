@@ -18,7 +18,7 @@ class ingpsphomepay extends PaymentModule
     {
         $this->name = 'ingpsphomepay';
         $this->tab = 'payments_gateways';
-        $this->version = '1.6.1';
+        $this->version = '1.7.0';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;

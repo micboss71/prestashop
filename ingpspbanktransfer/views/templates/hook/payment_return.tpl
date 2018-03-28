@@ -1,8 +1,11 @@
+<h3>{l s='Your order at %s' sprintf=$shop_name mod='ingpspbanktransfer'}</h3>
+
 {if $status == 'pending'}
 <p class="warning">{l s='The status of your order on %s could not be determined.' sprintf=$shop_name mod='ingpspbanktransfer'}
 </p>
 {else if $status == 'ok'}
-<p>{l s='Your order on %s is pending.' sprintf=$shop_name mod='ingpspbanktransfer'}
+    <p>     
+        {l s='Your order on %s is pending.' sprintf=$shop_name mod='ingpspbanktransfer'}
 	<br /><br />
 	{l s='To complete your order, transfer the amount using the information below' mod='ingpspbanktransfer'}
 	<br /><br />- {l s='Amount:' mod='ingpspbanktransfer'} <span class="price"><strong>{$total_to_pay}</strong></span>

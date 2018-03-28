@@ -2,7 +2,7 @@
 <module>
 	<name>ingpspklarna</name>
 	<displayName><![CDATA[ING PSP Klarna]]></displayName>
-	<version><![CDATA[1.6.1]]></version>
+	<version><![CDATA[1.7.0]]></version>
 	<description><![CDATA[Accept payments for your products using ING PSP Klarna]]></description>
 	<author><![CDATA[Ginger Payments]]></author>
 	<tab><![CDATA[payments_gateways]]></tab>

@@ -16,7 +16,7 @@ class ingpsppayconiq extends PaymentModule
     {
         $this->name = 'ingpsppayconiq';
         $this->tab = 'payments_gateways';
-        $this->version = '1.6.1';
+        $this->version = '1.7.0';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
@@ -131,7 +131,6 @@ class ingpsppayconiq extends PaymentModule
                 $presta_address->company,
                 $presta_address->address1,
                 $presta_address->address2,
-                $presta_address->firstname." ".$presta_address->lastname,
                 $presta_address->postcode." ".$presta_address->city,
             ))),
             'address_type' => 'customer',

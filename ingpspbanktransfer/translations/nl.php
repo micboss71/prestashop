@@ -10,11 +10,13 @@ $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_572b221ec6530322501
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_7853e11acea9a6109b2f1c00cdb4041e'] = 'Uw bestelling bij';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_0d8a5a85d378a2c248326eac1b045556'] = 'Gebruik het volgende kenmerk bij uw overschrijving:';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_d438503a23d967ac1bfbeee3e174bca0'] = 'Betalingskenmerk :';
+$_MODULE['<{ingpspbanktransfer}prestashop>error_68a489dbc8079a40832c3d558fcfb069'] = 'Uw bestelling bij %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_5023dbc72719b0d03162a18fda6db2b3'] = 'Helaas is er een fout opgetreden tijdens het verwerken van uw betaling. Onze excuses voor het ongemak.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_7dc1ee1a41f69f4027a773780c058b07'] = 'Klik hier om een andere betaalmethode te selecteren.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_34e0a062726d06e24047764c3bef28c0'] = 'Klik hier om nogmaals te proberen.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_b260f74ed85604be0f0381ce059f6b44'] = 'Keer terug naar de betaalpagina.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_0afd6d0687be21f6cd46d159aa130db4'] = 'Betaal met overboeking';
+$_MODULE['<{ingpspbanktransfer}prestashop>payment_return_68a489dbc8079a40832c3d558fcfb069'] = 'Uw bestelling bij %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_39e50761df1515cf368f1242a61a81bd'] = 'De status van uw betaling bij %s kon niet bepaald worden.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_60cc46d58b23f7b478ffcc73ed70ae57'] = 'Uw bestelling bij %s is in verwerking.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_0aa295158c331b68aaa44f535abf0718'] = 'Om uw bestelling af te ronden, gebruikt u de volgende overboekingsgegevens';
