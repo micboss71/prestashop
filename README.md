@@ -5,7 +5,7 @@ This is the offical ING plugin for Kassa Compleet, ING ePay and ING Checkout.
 
 By integrating your webshop with ING Payment Service Provider (PSP) you can accept payments from your customers in an easy and trusted manner with all relevant payment methods supported. 
 
-The following payment methods are supported, depending on which ING PSP product you implement: iDEAL, Bancontact, Visa, mastercard, V PAY, Maestro, PayPal, SOFORT, Klarna and Bank transfers.
+The following payment methods are supported, depending on which ING PSP product you implement: iDEAL, Bancontact, Visa, mastercard, V PAY, Maestro, PayPal, SOFORT, Klarna, AfterPay and Bank transfers.
 
 With this official ING plugin you can connect your webshop to the following ING PSP products: 
 - [ING Kassa Compleet](https://www.ing.nl/zakelijk/betalen/geld-ontvangen/kassa-compleet/index.html) for the Dutch market
@@ -13,7 +13,7 @@ With this official ING plugin you can connect your webshop to the following ING 
 - ING Checkout for the Corporate market
 
 ## Version number
-Version 1.6.1
+Version 1.7.0
 
 ## Pre-requisites to install the plug-ins: 
 - PHP v5.4 and above

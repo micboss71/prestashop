@@ -10,11 +10,13 @@ $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_572b221ec6530322501
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_7853e11acea9a6109b2f1c00cdb4041e'] = 'Ihre Bestellung bei';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_0d8a5a85d378a2c248326eac1b045556'] = 'Verwenden Sie die folgende Referenz, beim Zahlen für Ihre Bestellung:';
 $_MODULE['<{ingpspbanktransfer}prestashop>ingpspbanktransfer_d438503a23d967ac1bfbeee3e174bca0'] = 'Zahlungsreferenz :';
+$_MODULE['<{ingpspbanktransfer}prestashop>error_68a489dbc8079a40832c3d558fcfb069'] = 'Ihre bestellung bei %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_5023dbc72719b0d03162a18fda6db2b3'] = 'Leider ist ein Fehler bei der Verarbeitung Ihrer Bezahlung aufgetreten.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_7dc1ee1a41f69f4027a773780c058b07'] = 'Bitte klick hier um eine andere Zahlungsart zu wahlen.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_34e0a062726d06e24047764c3bef28c0'] = 'Bitte klicken Sie hier noch einmal zu versuchen.';
 $_MODULE['<{ingpspbanktransfer}prestashop>error_b260f74ed85604be0f0381ce059f6b44'] = 'Kehren Sie zurück zur Kassa.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_0afd6d0687be21f6cd46d159aa130db4'] = 'Bezahlen mit Banküberweisung';
+$_MODULE['<{ingpspbanktransfer}prestashop>payment_return_68a489dbc8079a40832c3d558fcfb069'] = 'Ihre bestellung bei %s';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_39e50761df1515cf368f1242a61a81bd'] = 'Der Status Ihrer Bezahlung bei %s konnte nicht bestimmt werden.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_60cc46d58b23f7b478ffcc73ed70ae57'] = 'Ihrer Bezahlung bei %s wird bearbeitet.';
 $_MODULE['<{ingpspbanktransfer}prestashop>payment_return_0aa295158c331b68aaa44f535abf0718'] = 'Um Ihre Bestellung abzuschließen, überweisen Sie den Betrag mit den untenstehenden Informationen';

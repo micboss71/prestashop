@@ -13,4 +13,5 @@ $_MODULE['<{ingpsphomepay}prestashop>error_7dc1ee1a41f69f4027a773780c058b07'] = 
 $_MODULE['<{ingpsphomepay}prestashop>error_34e0a062726d06e24047764c3bef28c0'] = 'Bitte klicken Sie hier noch einmal zu versuchen.';
 $_MODULE['<{ingpsphomepay}prestashop>error_b260f74ed85604be0f0381ce059f6b44'] = 'Kehren Sie zurück zur Kassa.';
 $_MODULE['<{ingpsphomepay}prestashop>payment_171e805135cd2492623cd338a7c42a1b'] = 'Bezahlen bei Home\'Pay';
+$_MODULE['<{ingpsphomepay}prestashop>payment_return_68a489dbc8079a40832c3d558fcfb069'] = 'Ihre bestellung bei %s';
 $_MODULE['<{ingpsphomepay}prestashop>payment_return_0f9b4be6207d496fc281b0cce2eeed3b'] = 'Herzlichen Dank für Ihre Bestellung.';

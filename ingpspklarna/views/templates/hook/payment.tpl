@@ -13,7 +13,7 @@
         color: #777;
     }
     a.ingpspklarna {
-        background: url('https://cdn.klarna.com/1.0/shared/image/generic/logo/nl_nl/basic/blue-black.png?width=85') 10px 30px no-repeat;
+        background: url({$base_dir}modules/ingpspklarna/logo_bestelling.png) 15px 12px no-repeat;
     }
 </style>
 

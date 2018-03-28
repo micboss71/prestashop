@@ -24,7 +24,7 @@ class ingpsp extends PaymentModule
     {
         $this->name = 'ingpsp';
         $this->tab = 'payments_gateways';
-        $this->version = '1.6.1';
+        $this->version = '1.7.0';
         $this->author = 'Ginger Payments';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
@@ -104,6 +104,7 @@ class ingpsp extends PaymentModule
         if (Tools::isSubmit('btnSubmit')) {
             Configuration::updateValue('ING_PSP_APIKEY', trim(Tools::getValue('ING_PSP_APIKEY')));
             Configuration::updateValue('ING_PSP_APIKEY_TEST', trim(Tools::getValue('ING_PSP_APIKEY_TEST')));
+            Configuration::updateValue('ING_PSP_AFTERPAY_APIKEY_TEST', trim(Tools::getValue('ING_PSP_AFTERPAY_APIKEY_TEST')));
             Configuration::updateValue('ING_PSP_PRODUCT', Tools::getValue('ING_PSP_PRODUCT'));
             Configuration::updateValue('ING_PSP_USE_WEBHOOK', Tools::getValue('ING_PSP_USE_WEBHOOK'));
             Configuration::updateValue('ING_PSP_BUNDLE_CA', Tools::getValue('ING_PSP_BUNDLE_CA'));
@@ -209,10 +210,17 @@ class ingpsp extends PaymentModule
                     ),
                     array(
                         'type' => 'text',
-                        'label' => $this->l('Test API Key'),
+                        'label' => $this->l('Klarna Test API Key'),
                         'name' => 'ING_PSP_APIKEY_TEST',
                         'required' => false,
                         'desc' => $this->l('The Test API Key is Applicable only for Klarna. Remove when not used.')
+                    ),
+                    array(
+                        'type' => 'text',
+                        'label' => $this->l('Afterpay Test API Key'),
+                        'name' => 'ING_PSP_AFTERPAY_APIKEY_TEST',
+                        'required' => false,
+                        'desc' => $this->l('The Test API Key is Applicable only for Afterpay. Remove when not used.')
                     ),
                 ),
                 'submit' => array(
@@ -249,6 +257,7 @@ class ingpsp extends PaymentModule
         return array(
             'ING_PSP_APIKEY' => Tools::getValue('ING_PSP_APIKEY', Configuration::get('ING_PSP_APIKEY')),
             'ING_PSP_APIKEY_TEST' => Tools::getValue('ING_PSP_APIKEY_TEST', Configuration::get('ING_PSP_APIKEY_TEST')),
+            'ING_PSP_AFTERPAY_APIKEY_TEST' => Tools::getValue('ING_PSP_AFTERPAY_APIKEY_TEST', Configuration::get('ING_PSP_AFTERPAY_APIKEY_TEST')),
             'ING_PSP_PRODUCT' => Tools::getValue('ING_PSP_PRODUCT', Configuration::get('ING_PSP_PRODUCT')),
             'ING_PSP_BUNDLE_CA' => Tools::getValue('ING_PSP_BUNDLE_CA', Configuration::get('ING_PSP_BUNDLE_CA')),
             'ING_PSP_USE_WEBHOOK' => Tools::getValue('ING_PSP_USE_WEBHOOK', Configuration::get('ING_PSP_USE_WEBHOOK'))

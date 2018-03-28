@@ -1,3 +1,4 @@
+<h3>{l s='Your order at %s' sprintf=$shop_name mod='ingpspcashondelivery'}</h3>
 {if $status == 'ok'}
 <p>{l s='Your order on %s is complete.' sprintf=$shop_name mod='ingpspcashondelivery'}
 	<br /><br />
